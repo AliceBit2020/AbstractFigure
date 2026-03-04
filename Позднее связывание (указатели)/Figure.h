@@ -1,8 +1,8 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 
 using namespace std;
-class Figure///абстрактний клас, не можна створити об'єкт
+class Figure///Р°Р±СЃС‚СЂР°РєС‚РЅРёР№ РєР»Р°СЃ, РЅРµ РјРѕР¶РЅР° СЃС‚РІРѕСЂРёС‚Рё РѕР±'С”РєС‚
 {
 protected:
 
@@ -30,10 +30,10 @@ public:
     void ShowName() {
         cout << name << endl;
     }
-    virtual void ShowArea() const =0;/////  чисто віртуальний метод , такі методи роблять класи абстрактними
+    virtual void ShowArea() const =0;/////  С‡РёСЃС‚Рѕ РІС–СЂС‚СѓР°Р»СЊРЅРёР№ РјРµС‚РѕРґ , С‚Р°РєС– РјРµС‚РѕРґРё СЂРѕР±Р»СЏС‚СЊ РєР»Р°СЃРё Р°Р±СЃС‚СЂР°РєС‚РЅРёРјРё
 
 
-    virtual ~Figure()
+    virtual~Figure()
     {
         cout << "Destructor Figure" << endl;
         if (name)

@@ -1,11 +1,11 @@
-#pragma once
+п»ї#pragma once
 
 #include "Figure.h"
 
 class Circle :
     public Figure
 {
-
+    char* ch;
     double r;
 public:
 
@@ -14,14 +14,16 @@ public:
         cout << "Constructor  Circle() " << endl;
         this->r = r;
         SetName("Circle");
+        ch = new char[5];
     };
 
-    ////virtual void ShowArea() const = 0;/////чисто віртуальний метод
-    virtual void ShowArea() const;///////перевизначаємо пустий чисто віртуальний метод від батька ЗАБОВ'ЯЗАННЯ
+    ////virtual void ShowArea() const = 0;/////С‡РёСЃС‚Рѕ РІС–СЂС‚СѓР°Р»СЊРЅРёР№ РјРµС‚РѕРґ
+    virtual void ShowArea() const;///////РїРµСЂРµРІРёР·РЅР°С‡Р°С”РјРѕ РїСѓСЃС‚РёР№ С‡РёСЃС‚Рѕ РІС–СЂС‚СѓР°Р»СЊРЅРёР№ РјРµС‚РѕРґ РІС–Рґ Р±Р°С‚СЊРєР° Р—РђР‘РћР’'РЇР—РђРќРќРЇ
 
      ~Circle()
     {
         cout << "Destructor Circle" << endl;
+        delete[]ch;
        
     }
 };
